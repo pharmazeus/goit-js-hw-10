@@ -1,4 +1,4 @@
-/*reset */
+/* Reset */
 h1,
 h2,
 h3,
@@ -33,65 +33,86 @@ img {
   max-width: 100%;
   height: auto;
 }
-/*reset end */
-/*main */
-.container {
-  max-width: 1128px;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-top: 24px;
-}
+/* Reset end */
+
+/* Main styles */
 .section {
-  padding-left: 156px;
-  padding-right: 156px;
+  padding-left: 30px;
+  padding-right: 30px;
   max-width: 1440px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.list {
+
+.container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 38px;
-}
-.item {
-  background-color: #ffffff;
-  width: calc((100% - 48px) / 3);
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.image {
+  flex-direction: column;
+  gap: 8px;
+  max-width: 355px;
   width: 100%;
-  height: auto;
-}
-
-.return-btn {
-  display: block;
-  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  align-items: start;
+}
+.timer {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+#datetime-picker {
+  box-sizing: border-box;
+  min-width: 272px;
+  min-height: 40px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-right: auto;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #808080;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+button[data-start] {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 75px;
+  min-height: 40px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  background: #cfcfcf;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.99;
-  letter-spacing: 0.09em;
-  color: #fff;
-  background-color: #4e75ff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  padding: 8px 8px;
-  width: 280px;
-}
-
-.return-btn:hover {
-  background-color: #6c8cff;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #989898;
 }
