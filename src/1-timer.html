@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/flatpick-calendar.css" />
-    <link rel="stylesheet" href="./css/flatpickr-calender.css" />
+    <link rel="stylesheet" href="./css/timer.css" />
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,33 +17,32 @@
     <!--Google fonts end-->
   </head>
   <body>
-    <section class="section">
-      <div class="container">
-        <div>
-          <input type="text" id="datetime-picker" />
-          <button type="button" data-start>Start</button>
-        </div>
+    <div class="container">
+      <div>
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start>Start</button>
+      </div>
 
-        <div class="timer">
-          <div class="field">
-            <span class="value" data-days>00</span>
-            <span class="label">DAYS</span>
-          </div>
-          <div class="field">
-            <span class="value" data-hours>00</span>
-            <span class="label">HOURS</span>
-          </div>
-          <div class="field">
-            <span class="value" data-minutes>00</span>
-            <span class="label">MINUTES</span>
-          </div>
-          <div class="field">
-            <span class="value" data-seconds>00</span>
-            <span class="label">SECONDS</span>
-          </div>
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">DAYS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">HOURS</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">MINUTES</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">SECONDS</span>
         </div>
       </div>
-    </section>
+      <a class="link-go-back" href="./index.html">go back</a>
+    </div>
     <script type="module" src="./js/1-timer.js"></script>
   </body>
 </html>

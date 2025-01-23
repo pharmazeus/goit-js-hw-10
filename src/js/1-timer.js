@@ -30,6 +30,7 @@ const options = {
     } else {
       startButton.disabled = false;
       userSelectedDate = selectedDate;
+      startButton.classList.add('normal-btn');
     }
   },
 };
@@ -38,6 +39,8 @@ flatpickr(datePicker, options);
 startButton.addEventListener('click', () => {
   startButton.disabled = true;
   datePicker.disabled = true;
+  startButton.classList.remove('normal-btn');
+
   // starts interval each second
   intervalId = setInterval(() => {
     const now = new Date();
@@ -57,19 +60,7 @@ startButton.addEventListener('click', () => {
   }, 1000);
 });
 // converts ms to days, hours, minutes, seconds
-function convertMs(ms) {
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
-
-  const days = Math.floor(ms / day);
-  const hours = Math.floor((ms % day) / hour);
-  const minutes = Math.floor(((ms % day) % hour) / minute);
-  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-
-  return { days, hours, minutes, seconds };
-}
+import { convertMs } from './convert_ms';
 //adds leading zero to numbers
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
