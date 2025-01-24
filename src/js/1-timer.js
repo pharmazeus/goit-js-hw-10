@@ -19,6 +19,36 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  // onReady: function (dObj, dStr, fp, dayElem) {
+  //   const days = fp.daysContainer.querySelectorAll('.flatpickr-day');
+
+  //   days.forEach(day => {
+  //     if (day.classList.contains('nextMonthDay')) {
+  //       day.remove();
+  //     }
+  //     //     console.dir(day);
+  //   });
+  // },
+  // disable: [
+  //   function (date) {
+  //     const currentMonth = new Date().getMonth();
+
+  //     return currentMonth !== date.getMonth();
+
+  //     console.log(currentDate.getMonth());
+  //     console.log(date.getMonth());
+  //   },
+  // ],
+  // enable: [
+  //   function (date) {
+  //     const currentMonth = new Date().getMonth();
+  //     console.log(date.getMonth() === currentMonth + 1);
+
+  //     return (
+  //       date.getMonth() === currentMonth || date.getMonth() === currentMonth + 1
+  //     );
+  //   },
+  // ],
   onClose(selectedDates) {
     let selectedDate = selectedDates[0];
     if (selectedDate <= new Date()) {
@@ -34,7 +64,7 @@ const options = {
     }
   },
 };
-flatpickr(datePicker, options);
+const calender = flatpickr(datePicker, options);
 
 startButton.addEventListener('click', () => {
   startButton.disabled = true;
@@ -60,7 +90,7 @@ startButton.addEventListener('click', () => {
   }, 1000);
 });
 // converts ms to days, hours, minutes, seconds
-import { convertMs } from './convert_ms';
+import { convertMs } from './convert-ms';
 //adds leading zero to numbers
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');

@@ -1,0 +1,7 @@
+.flatpickr-day.nextMonthDay {
+  display: none;
+}
+.flatpickr-days .dayContainer {
+  justify-content: flex-start;
+  column-gap: 4px;
+}
