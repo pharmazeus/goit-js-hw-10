@@ -225,10 +225,6 @@ button[data-start]:hover {
   background-color: #c1c1c1;
   border-color: transparent;
 }
-.flatpickr-weekdays .flatpickr-weekdaycontainer {
-  display: flex;
-  gap: 12px;
-}
 
 .normal-btn {
   background-color: #4e75ff !important;
